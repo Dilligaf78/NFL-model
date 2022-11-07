@@ -22,7 +22,7 @@ matplotlib.pyplot
 seaborn
 
 ## Video Demo
-url: https://youtu.be/
+url: https://youtu.be/ORzBJEqHnRg
 
 ## Usage
 Anyone may use BeeBuster
