@@ -1,7 +1,22 @@
 # NFL Points and Spread Models
+
 ## Machine learning regression models to predict nfl results
-I was lured into joining a football pool.  Unfortunately, I know nothing about football. In order to level the playing field, I explored 
-machine learning to predict the score and spread.
+
+I was lured into joining a football pool.  The pool is composed of more than 100 people who attempt to 
+guess which teams will beat the "CBS SPorts" predicted spread.  While the people who talked me into joining 
+are not statheads, some of the others in the pool are avid fans and statheads and have set a very high 
+bar to compete.
+
+I did not have a lifetime to learn as some of these players had, so I decided to develop a linear regression
+algorithm of publically available stats.  I have been using this same algorithm since 2019.  On average, 
+I would correctly identify 60% of the games.  This was a enough to keep me in the top ten of the pool.
+
+After taking several computer classes this year, including Harvard's CS50, I decided to try a machine 
+learning algorithm and find out if my odds could be improved.
+
+I tried a Watson model, as well as several Python packages.  The most successful package was SKlearn.  Utilizing linear 
+and logistical regression with scaling functions to normalize the data and elastic net filter out some of the noise, 
+I was able to increase my accuracy to 80%. (At tleast for this week.  Will have to monitor going forward.)
 
 I have scraped data from three sites:
 * https://www.pro-football-reference.com/
