@@ -40,7 +40,9 @@ seaborn
 url: https://youtu.be/ORzBJEqHnRg
 
 ## Usage
-Anyone may use BeeBuster
+Anyone may use this program.  But it is not intended to be used for monetary betting. The house always wins.
+
+This program is for entertainment purposes only.
 
 ## Authors
 Sara Estes aka Dilligaf78 
