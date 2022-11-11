@@ -35,7 +35,7 @@ import scipy.stats
 
 
 # read the training data
-train_data = pd.read_csv('C:/Users/sarae/Desktop/NFL_Modeling/alloff.csv')
+train_data = pd.read_csv('~/NFL_Modeling/alloff.csv')
 
 
 # In[118]:
@@ -158,7 +158,7 @@ def optthTrainingObject(train_x, test_x, train_y, test_y, avar, rvar, ivar, ovar
 # In[122]:
 
 
-predictweek = pd.read_csv('C:/Users/sarae/Desktop/NFL_Modeling/tomodel.csv')
+predictweek = pd.read_csv('~/NFL_Modeling/tomodel.csv')
 
 # select just the game stats
 new_X = predictweek.loc[:,features.columns]
