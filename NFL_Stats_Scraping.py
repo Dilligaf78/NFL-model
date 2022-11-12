@@ -66,10 +66,10 @@ def scrape_table(url, tablename, path):
 
 
 # Global variables
-path = 'C:\\Users\\sarae\\Desktop\\NFL_Modeling\\'
+path = '~\\NFL_Modeling\\'
 
 # read the team name information
-allTeams = pd.read_csv('C:\\Users\\sarae\\Desktop\\NFL_Modeling\\all_teams.csv')
+allTeams = pd.read_csv('~\\NFL_Modeling\\all_teams.csv')
 
 
 # websites to scrape
@@ -86,14 +86,14 @@ nfelo = 'https://www.nfeloapp.com/nfl-power-ratings/'
 
 # Get a table of all games for the season
 games = pd.read_html('https://www.pro-football-reference.com/years/2022/games.htm#games')
-games[0].to_csv('C:\\Users\\sarae\\Desktop\\NFL_Modeling\\games.csv')
+games[0].to_csv('~\\NFL_Modeling\\games.csv')
 
 
 # In[121]:
 
 
 # Expand the games to run in both directions
-gamesDF = pd.read_csv('C:/Users/sarae/Desktop/NFL_Modeling/games.csv')
+gamesDF = pd.read_csv('~/NFL_Modeling/games.csv')
 
 # rename colums
 gamesDF.columns = ['gameid','week', 'day_of_week', 'date', 'time', 'team_full_name', 'home_away', 
@@ -131,7 +131,7 @@ frames = [gamesDF, game2DF]
 gamesDF = pd.concat(frames, ignore_index = True)
 
 #  Keep an excel, just in case
-gamesDF.to_csv('C:\\Users\\sarae\\Desktop\\NFL_Modeling\\allgames.csv')
+gamesDF.to_csv('~\\NFL_Modeling\\allgames.csv')
 
 
 # In[129]:
@@ -207,7 +207,7 @@ oppdf.columns = newheaders
 # In[199]:
 
 
-AllpfrDF = pd.read_csv('C:\\Users\\sarae\\Desktop\\NFL_Modeling\\all_teams.csv')
+AllpfrDF = pd.read_csv('~\NFL_Modeling\\all_teams.csv')
 # iterate through the tables to create dataframes
 AllpfrDF = AllpfrDF.merge(oppdf, how = 'left', left_on= "full_team_name", right_on='Tm', validate="1:1")
 
@@ -221,7 +221,7 @@ tablenames = ['opp.htm#team_stats','opp.htm#team_conversions','opp.htm#advanced_
               'index.htm#all_rushing', 'index.htm#all_returns', 'index.htm#all_kicking', 'index.htm#all_team_scoring', 
               'index.htm#all_team_conversions', 'index.htm#all_drives']
 
-AllpfrDF = pd.read_csv('C:\\Users\\sarae\\Desktop\\NFL_Modeling\\all_teams.csv')
+AllpfrDF = pd.read_csv('~\\NFL_Modeling\\all_teams.csv')
 # iterate through the tables to create dataframes
 for tablename in tablenames:
     
@@ -255,7 +255,7 @@ for tablename in tablenames:
 
 
 AllpfrDF.head
-AllpfrDF.to_csv('C:\\Users\\sarae\\Desktop\\NFL_Modeling\\alloff.csv')
+AllpfrDF.to_csv('~\\NFL_Modeling\\alloff.csv')
 
 
 # In[225]:
@@ -297,11 +297,11 @@ for item in nfelodf['team']:
 
 AllnflDF = AllprfDF
 allnflDF = AllnflDF.merge(nfeloDF, how='left', left_on='nfelo_name', right_on = 'team')
-AllnflDF = AllnflDF.merge(pd.read_csv('C:/Users/sarae/Desktop/NFL_Modeling/soonymoore.csv'), how='left', on='full_team_name')
-AllnflDF = AllnflDF.merge(pd.read_csv('C:/Users/sarae/Desktop/NFL_Modeling/dvoa_off.csv'),how='left', on='full_team_name')
-AllDF = pd.merge([gamesDF, pd.read_csv('C:/Users/sarae/Desktop/NFL_Modeling/games.htm.csv')], axis = 0)
+AllnflDF = AllnflDF.merge(pd.read_csv('~/NFL_Modeling/soonymoore.csv'), how='left', on='full_team_name')
+AllnflDF = AllnflDF.merge(pd.read_csv('~/dvoa_off.csv'),how='left', on='full_team_name')
+AllDF = pd.merge([gamesDF, pd.read_csv(~/NFL_Modeling/games.htm.csv')], axis = 0)
 
-AllpfrDF.to_csv('C:\\Users\\sarae\\Desktop\\NFL_Modeling\\alloff.csv')
+AllpfrDF.to_csv('~\\NFL_Modeling\\alloff.csv')
 
 
 # Second, collect data from https://sonnymoorepowerratings.com/nfl-foot.htm
